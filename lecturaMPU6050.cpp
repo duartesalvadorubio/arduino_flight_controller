@@ -65,10 +65,6 @@ void calibraMPU() {
         for (i = 0; i < 3; i++){
             xiroCal[i] += xiroRaw[i];
         }
-        /*xiroXCal += xiroX;
-        xiroYCal += xiroY;
-        xiroZCal += xiroZ;*/
-
         delayMicroseconds(1000); //Espera para tomar medidas separadas brevemente
     }
     
