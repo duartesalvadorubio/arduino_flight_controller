@@ -77,11 +77,6 @@ void calibraMPU() {
         xiroCal[i] = xiroCal[i]/3000;
     }
 
-   
-    /*
-    xiroCal[0] = xiroCal[0] / 3000;
-    xiroCal[1] = xiroCal[1] / 3000;
-    xiroCal[3] = xiroCal[2] / 3000;*/
 
     //CALIBRADO ACELEROMETRO
     for (varCal = 0; varCal < 3000; varCal++) {
@@ -91,20 +86,12 @@ void calibraMPU() {
         for (i = 0; i < 3; i++){
             aclCal[i] += acl[i];
         }
-        /*
-        aclCal[0] += acl[0];
-        aclCal[1] += acl[1];
-        aclCal[2] += acl[2];*/
     }
+
     //Calculo promedio
     for (i = 0; i < 3; i++){
         aclCal[i] = aclCal[i]/3000;
-    }/*
-    aclCal[0] = aclCal[0] / 3000;
-    aclCal[1] = aclCal[1] / 3000;
-    aclCal[2] = aclCal[2] / 3000;*/
-
-    //NOTA: Podo apgar unha luz de calibraci�n ao rematar
+    }
 }
 
 void mideMPU() {
@@ -139,20 +126,13 @@ void procesaMPU() {
     for(i = 0; i < 3; i++){
         acl[i] -= aclCal[i];
     }
-    /*
-    aclX -= aclXCal;
-    aclY -= aclYCal;
-    aclZ -= aclZCal;
-    */
+
     acl[2] = acl[2] + 4096; //O acelerometro mide a aceleracion terrestre, hai que compensalo
 
     //Calculo vel. angular
     for(i = 0; i < 3; i++){
         xiro[i] = (xiroRaw[i] - xiroCal[i]) / 65.5 ;//Un valor bruto obtido de 65.5 equivale a un xiro de 1�/s
     }
-    /*xiroPitch = (xiroX - xiroXCal) / 65.5; //Un valor bruto obtido de 65.5 equivale a un xiro de 1�/s
-    xiroRoll = (xiroY - xiroYCal) / 65.5;
-    xiroYaw = (xiroZ - xiroZCal) / 65.5;*/
 
     //C�lculo �ngulos
 
