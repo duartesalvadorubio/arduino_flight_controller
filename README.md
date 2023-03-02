@@ -7,11 +7,12 @@ This repository presents the code used in this flight controller, structured in 
 
 The drone had real-time imaging too, but this was an autonomous system and does not depend on the code of the flight controller so there is nothing to be found relating to it.
 
+**NOTE:** It is worth mentioning that **the project was carried out entirely in Galician language** and therefore both the function names and the code comments are in this idiom. 
+
 ## 1. Code structure
 
 The code is structured in different C++ source files with their respective headers. Each of these files contains the definition of functions that implement each functionality of the drone. 
 
-It is worth mentioning that **the project was carried out entirely in Galician language** and therefore both the function names and the code comments are in this language.
 
 
 **Source code files:**
