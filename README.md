@@ -7,6 +7,8 @@ This repository presents the code used in this flight controller, structured in 
 
 The drone had real-time imaging too, but this was an autonomous system and does not depend on the code of the flight controller so there is nothing to be found relating to it.
 
+Here there is a [link](https://www.thingiverse.com/thing:5445613) to the designed and 3D-printed camera gimbal used in the project.
+
 **NOTE:** It is worth mentioning that **the project was carried out entirely in Galician language** and therefore both the function names and the code comments are in this idiom. 
 
 ## 1. Code structure
