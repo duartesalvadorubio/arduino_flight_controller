@@ -75,7 +75,7 @@ void visualizaESC() {
 }
 
 void inicializaPWM() {
-  for (int i = 0; i ++; i < 4) {
+  for (int i = 0; i < 4; i++) {
     pinMode(pinESC[i], OUTPUT);
   }
   pinMode(pinServo[0], OUTPUT);
